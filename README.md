@@ -1,75 +1,87 @@
 # Celso Naemen
 
-**Software Engineer** focado em construir sistemas full stack, explorar segurança de aplicações, desenvolver automação assistida por IA e investigar sistemas Windows.
+**Software Engineer** focused on building full-stack applications, designing security-aware systems, working with data pipelines, investigating Windows internals, and contributing to open source.
+
+> Build systems. Understand systems. Break systems safely. Improve systems. Repeat.
 
 ## Engineering Focus
 
-- Software Engineering
-- Full Stack Development
+- Full Stack / Application Engineering
 - Application Security
-- AI Engineering
-- Open Source
+- Data Engineering
+- Systems & Windows
+- AI Engineering in evolution
 - Digital Forensics
+- Open Source
 
 ## Selected Engineering Work
 
-- [**Orion**](https://github.com/celsonaemen/orion) — Aplicação full stack em evolução para autenticação, administração, setores, permissões e auditoria. Construída em TypeScript com Next.js, NestJS, PostgreSQL e Prisma, com comunicação operacional prevista como evolução planejada do sistema.
+- [**Orion**](https://github.com/celsonaemen/orion) — Full-stack system in development for authentication, administration, sectors, permissions, and audit logging. Built with TypeScript, Next.js, Tailwind, NestJS, Prisma, and PostgreSQL, with authentication and authorization as core architectural concerns. Operational communication is planned as a future evolution of the system.
 
-- [**ETL-Manhu-MG**](https://github.com/celsonaemen/ETL-Manhu-MG) — Pipeline em Python para ingestão, transformação e carga de dados climáticos de Manhuaçu, Minas Gerais. Usa Apache Airflow, pandas, SQLAlchemy, PostgreSQL, Docker Compose e a OpenWeather API.
+- [**ETL-Manhu-MG**](https://github.com/celsonaemen/ETL-Manhu-MG) — Data pipeline for ingesting, transforming, and loading weather data from Manhuaçu, Minas Gerais. Uses Python, Apache Airflow, pandas, SQLAlchemy, PostgreSQL, Docker Compose, and the OpenWeather API.
 
-- [**acer-a315-56-control**](https://github.com/celsonaemen/acer-a315-56-control) — Pesquisa e diagnóstico de baixo nível específico do Acer Aspire A315-56. Implementado em C#, explora ACPI, DSDT, EC, MMIO, MSR e IOCTL dentro de um escopo de hardware delimitado.
+- [**acer-a315-56-control**](https://github.com/celsonaemen/acer-a315-56-control) — Low-level research and diagnostics specific to the Acer Aspire A315-56. Uses C# to investigate Windows internals, ACPI, DSDT, embedded-controller behavior, MMIO, MSR, and IOCTL within a model-specific hardware scope.
 
-- [**controle-de-solicita-es**](https://github.com/celsonaemen/controle-de-solicita-es) — Aplicação desktop/MVP local para triagem e acompanhamento de solicitações, com integração de e-mail implementada. Combina Flask, React, Electron e SQLite; expansão para outros canais e fluxos de SLA é evolução planejada.
+- [**controle-de-solicita-es**](https://github.com/celsonaemen/controle-de-solicita-es) — Local desktop MVP for triage and tracking of requests, with email integration implemented. Combines Flask, React, Electron, and SQLite; support for additional channels and SLA-oriented workflows remains planned evolution rather than a consolidated feature set.
 
-- [**Agentanalistyfiscal**](https://github.com/celsonaemen/Agentanalistyfiscal) — Projeto de automação assistida por IA aplicado ao domínio fiscal. Reúne código, conhecimento de domínio, documentação, testes e componentes de interface para exploração técnica, sem alegar validação operacional ou uso em produção.
+- [**Agentanalistyfiscal**](https://github.com/celsonaemen/Agentanalistyfiscal) — Exploration of AI-assisted automation applied to the fiscal and accounting domain, including agents, tools, domain knowledge, documentation, and tests. It is presented as an evolving technical project, not as a production-validated product.
 
-- [**generatordash**](https://github.com/celsonaemen/generatordash) — Dashboard em Python/Streamlit com estrutura de testes e scripts de validação. Demonstra exploração de interfaces de dados e preocupação com verificação do comportamento da aplicação.
+- [**generatordash**](https://github.com/celsonaemen/generatordash) — Python/Streamlit dashboard with tests and validation scripts. Demonstrates experimentation with data interfaces and application behavior verification.
 
 ## Digital Forensics & Open Source
 
-- [**IPED — PR #2979**](https://github.com/sepinf-inc/IPED/pull/2979) — Contribuição integrada ao IPED que corrigiu a normalização de caminhos usada no cálculo de AppIDs para Windows Jump Lists. O ajuste trata caminhos sob `USERPROFILE` e `PUBLIC`, evita o falso match de `PublicAlice` e adiciona testes de regressão.
+- [**IPED — PR #2979**](https://github.com/sepinf-inc/IPED/pull/2979) — Merged upstream contribution to IPED that fixed path normalization used in AppID calculation for Windows Jump Lists. The change handles `USERPROFILE` and `PUBLIC` paths, prevents the `PublicAlice` false match, and adds regression tests.
 
-- [**PawnIO.Modules — PR #95**](https://github.com/namazso/PawnIO.Modules/pull/95) — Pull request aberto para um módulo read-only específico do Acer A315-56, baseado no mailbox estendido do EC exposto pelo firmware ACPI. Inclui validação de hardware, limites de acesso e documentação do reverse engineering.
+- [**PawnIO.Modules — PR #95**](https://github.com/namazso/PawnIO.Modules/pull/95) — Open pull request proposing a read-only module specific to the Acer A315-56, based on the extended ACPI embedded-controller mailbox. The PR documents hardware gating, access limits, and reverse-engineering context.
 
-- [**PawnIO.Modules — PR #96**](https://github.com/namazso/PawnIO.Modules/pull/96) — Pull request aberto para controle semântico do Intel bi-directional PROCHOT. A implementação restringe a alteração ao bit `ENABLE_BIDIR_PROCHOT` de `MSR_POWER_CTL`, usa read-modify-write, valida o ambiente e exige read-back após alterações.
+- [**PawnIO.Modules — PR #96**](https://github.com/namazso/PawnIO.Modules/pull/96) — Open pull request proposing semantic control of Intel `ENABLE_BIDIR_PROCHOT` in `MSR_POWER_CTL`, using constrained read-modify-write, environment validation, and read-back after state changes.
+
+- [**OpenClaude — Issue #300**](https://github.com/Gitlawb/openclaude/issues/300) — Technical issue report covering OpenAI-compatible providers, Groq, Termux/Android, and related configuration behavior. This is presented as a bug report and reproduction-oriented contribution, not as project authorship.
 
 ## Technical Areas
 
-### Application Engineering
+### Software Engineering
 
-TypeScript, JavaScript, React, Next.js, NestJS, Node.js, Flask, Electron, PostgreSQL, Prisma, SQLite, Docker Compose e pnpm.
+**Languages:** Python, TypeScript, JavaScript
 
-### Security Engineering
-
-Authentication, authorization, RBAC, JWT, bcrypt, cookies HttpOnly, refresh-token handling, session management e auditoria.
+**Application Engineering:** React, Next.js, NestJS, Prisma, Flask, Electron, PostgreSQL, SQLite
 
 ### Data Engineering
 
-Python, pandas, Apache Airflow, SQLAlchemy, PostgreSQL, Docker Compose e OpenWeather API.
+Python, pandas, Apache Airflow, SQLAlchemy, PostgreSQL, Docker Compose, and OpenWeather API integration.
+
+### Security Engineering
+
+Authentication, authorization, JWT, RBAC/permissions, HttpOnly cookies, session management, refresh-token handling, bcrypt/password hashing, and audit logging.
 
 ### Systems & Windows
 
-C#, Windows internals, ACPI, DSDT, EC, MMIO, MSR, IOCTL, Pawn e PawnIO.
+C#, Windows internals, ACPI, DSDT, embedded controllers, MMIO, MSR, IOCTL, and PawnIO. The public evidence is specific to hardware research, diagnostics, and PawnIO contributions; it is not presented as generic driver or firmware engineering experience.
 
 ### AI Engineering
 
-Python, agentes, automação assistida por IA, prompts, bases de conhecimento e interfaces relacionadas a LLMs, nos projetos públicos correspondentes.
+Python, AI-assisted automation, agent tooling, domain knowledge workflows, and LLM-related tooling in projects that are still evolving. These repositories demonstrate experimentation and applied exploration, not consolidated production AI experience.
 
-### Forensics & Open Source
+### Digital Forensics & Open Source
 
-IPED, Windows Jump Lists, AppID calculation, normalização de caminhos e colaboração upstream em projetos públicos.
+IPED, Windows artifacts, Windows Jump Lists, AppID calculation, path normalization, regression testing, and upstream contributions.
+
+### Tools & Platforms
+
+Git, GitHub, GitHub Actions, Docker, npm, pnpm, Maven, Gradle, PowerShell, and project-specific development tooling evidenced in the repositories.
 
 ## Engineering Approach
 
-- Reproduzir e testar problemas antes de propor correções.
-- Tratar segurança como parte da arquitetura, não como uma etapa isolada.
-- Documentar decisões técnicas, limites operacionais e hipóteses.
-- Automatizar tarefas repetitivas e favorecer fluxos verificáveis.
-- Contribuir upstream quando uma correção ou melhoria puder beneficiar o projeto de origem.
+- Reproduce and test problems before proposing fixes.
+- Treat security as an architectural concern.
+- Document technical decisions, operational limits, and assumptions.
+- Automate repetitive work while keeping project state understandable.
+- Prefer evidence from code, tests, and configuration over unsupported claims.
+- Contribute upstream when a fix can benefit the originating project.
 
 ## Current Interests
 
-Atualmente exploro **AI Engineering**, **Application Security**, **Windows Internals**, **Digital Forensics**, **Open Source**, **Agentic Systems** e **RAG/LLMs**. Esses interesses refletem projetos e estudos públicos em evolução, e não necessariamente experiência profissional consolidada em cada área.
+I am currently exploring **AI Engineering**, **Agentic Systems**, **LLM tooling**, **RAG**, **Application Security**, **Windows Internals**, **Digital Forensics**, and **Open Source**. These are areas of ongoing study and project evolution, not claims of consolidated professional experience in every topic.
 
 ## Contact
 
