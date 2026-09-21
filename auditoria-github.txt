@@ -1,0 +1,768 @@
+AUDITORIA TÉCNICA DO GITHUB — CELSONAEMEN
+
+Perfil: https://github.com/celsonaemen
+Repositório: https://github.com/celsonaemen/gutocodes
+Arquivo: auditoria-github.txt
+
+STATUS
+
+Este relatório foi criado a pedido do proprietário do perfil. Antes desta solicitação, não foram alterados código, configurações, repositórios ou commits. A única alteração autorizada nesta etapa é a criação deste arquivo de texto.
+
+OBJETIVO DO REPOSICIONAMENTO
+
+Reposicionar o GitHub como o perfil de um Software Engineer, com foco em:
+- Software Engineering
+- Full Stack Development
+- Application Security
+- AI Engineering
+- Open Source
+- Digital Forensics
+
+DIAGNÓSTICO GERAL
+
+O GitHub possui evidências técnicas mais fortes do que o README atual comunica. O posicionamento mais convincente é:
+
+Software Engineer com experiência prática em sistemas full stack, segurança de aplicações, engenharia de dados, automação, análise forense digital e desenvolvimento de baixo nível para Windows.
+
+As evidências mais fortes são:
+
+1. Contribuição upstream aceita no IPED, projeto open source de perícia forense digital.
+2. Orion, com arquitetura full stack, autenticação, autorização, sessões, auditoria, PostgreSQL, Prisma, NestJS, Next.js e testes.
+3. Contribuições no PawnIO.Modules, envolvendo MSR, ACPI, MMIO, drivers e hardware específico.
+4. acer-a315-56-control, com pesquisa de firmware, ACPI, mapeamento de hardware e implementação defensiva.
+5. ETL-Manhu-MG, com engenharia de dados, ingestão, transformação, DAGs e Docker.
+6. controle-de-solicita-es, com aplicação desktop/full stack usando Flask, React, Electron e SQLite.
+7. Agente Alterdata, potencialmente relevante para automação e AI aplicada, mas dependente de auditoria de dados e documentação.
+
+PROBLEMA CENTRAL
+
+O perfil atual declara muitas tecnologias e experiências que não estão igualmente comprovadas pelos repositórios públicos. O README menciona senioridade, liderança, microsserviços, Kubernetes, AWS, Terraform, vulnerabilidades, CVEs, manutenção de pacotes e métricas de desempenho que não estão suficientemente vinculadas a evidências públicas verificáveis.
+
+Essas informações podem ser verdadeiras, mas devem ser acompanhadas por links para projetos, PRs, pacotes, CVEs, artigos ou outras provas. O perfil deve priorizar código e contribuições públicas.
+
+REPOSITÓRIOS PRIORITÁRIOS
+
+1. ORION
+
+Propósito: aplicação full stack com autenticação, administração, setores, permissões e estrutura de comunicação.
+
+Linguagem: TypeScript.
+Tecnologias e estrutura observadas:
+- Next.js
+- NestJS
+- PostgreSQL
+- Prisma
+- Docker Compose
+- pnpm
+- BFF
+- cookies HttpOnly
+- monorepo com apps, packages, docs e scripts
+
+Segurança aparente:
+- bcrypt
+- JWT
+- refresh token
+- armazenamento de hash do refresh token
+- cookies HttpOnly
+- revogação de sessões
+- guards de autenticação e permissões
+- auditoria
+- banco limitado a localhost
+- .env.example sem evidência de segredo real no arquivo listado
+
+Testes e validações mencionadas nos PRs:
+- 13 testes backend e 10 frontend
+- 30 testes na administração
+- lint, typecheck e build aprovados
+- PostgreSQL saudável
+- migrations e seed executados
+
+Estado: ativo e em evolução.
+Classificação: projeto profissional de portfólio.
+Valor: extremamente alto.
+Recomendação: pinned, manter público, melhorar documentação e usar como principal evidência de Software Engineering e Application Security.
+
+Os PRs do Orion documentam melhor a engenharia do que o README. Devem ser aproveitados como fonte para a documentação final.
+
+2. IPED
+
+Propósito: ferramenta open source de perícia e análise forense digital.
+
+Estrutura observada:
+- iped-api
+- iped-app
+- iped-carvers
+- iped-engine
+- iped-geo
+- iped-parsers
+- iped-utils
+- iped-viewers
+- pom.xml
+
+A contribuição relevante não deve ser tratada como projeto autoral isolado, mas como experiência de colaboração upstream.
+
+PR integrado:
+https://github.com/sepinf-inc/IPED/pull/2979
+
+Tema do PR:
+- correção da normalização de caminhos
+- tratamento de %USERPROFILE%
+- tratamento de %PUBLIC%
+- prevenção de falso match com PublicAlice
+- associação de executáveis com Windows Jump Lists
+- testes para caminhos de usuário e pasta pública
+- validação parcial do build
+
+Valor: excepcional para Digital Forensics, Windows Internals e Open Source.
+Recomendação: destacar em uma seção específica de Open Source Contributions.
+
+3. ACER-A315-56-CONTROL
+
+Propósito: diagnóstico de hardware e controle de baixo nível para Acer Aspire A315-56.
+
+Conceitos e tecnologias:
+- ACPI
+- DSDT
+- EC mailbox
+- MMIO
+- MSR
+- IOCTL
+- Windows driver
+- firmware reverse engineering
+- hardware gating
+
+Estrutura:
+- src
+- docs
+- research
+- installer
+- tools
+- scripts CMD
+- SECURITY.md
+- licença
+
+Cuidados aparentes:
+- hardware específico
+- limites de acesso
+- ausência de IOCTL arbitrário
+- restrições por fabricante e modelo
+- validação de limites
+- documentação de riscos
+
+Estado: pesquisa/engenharia experimental avançada.
+Valor: muito alto para Application Security, Windows Internals, hardware research e Digital Forensics.
+Recomendação: pinned ou destaque técnico; reforçar documentação de segurança e limites operacionais.
+
+4. PAWNIO.MODULES
+
+Propósito: módulos de acesso a hardware para PawnIO.
+
+Tecnologias:
+- Pawn
+- Intel e AMD MSR
+- ACPI EC
+- MMIO
+- SMBus
+- PCH
+- SMM
+- módulos específicos de hardware
+
+A estrutura contém .github, include, _pawn, dezenas de módulos, README e licença.
+
+Contribuições identificadas:
+
+PR #95:
+https://github.com/namazso/PawnIO.Modules/pull/95
+
+- módulo read-only para Acer A315-56
+- ACPI/EC
+- MMIO
+- validação de hardware
+- limites de acesso
+- documentação de reverse engineering
+- compilação sem warnings
+
+PR #96:
+https://github.com/namazso/PawnIO.Modules/pull/96
+
+- controle semântico de Intel bi-directional PROCHOT
+- MSR POWER_CTL
+- read-modify-write
+- validação de arquitetura e família
+- read-back
+- prevenção de escrita arbitrária
+- comportamento persistente explícito
+
+Estado: PRs abertos/draft no momento da auditoria.
+Classificação: contribuição open source técnica de baixo nível.
+Valor: muito alto para Windows Internals, engenharia de sistemas, segurança aplicada e reverse engineering.
+Recomendação: destacar em contribuições open source, não necessariamente como projeto próprio pinned.
+
+5. ETL-MANHU-MG
+
+Propósito: pipeline ETL para coleta e processamento de dados climáticos de Manhuaçu, Minas Gerais.
+
+Linguagem: Python.
+Tecnologias e estrutura:
+- Python
+- DAGs
+- Docker Compose
+- notebooks
+- pyproject.toml
+- pipeline de ingestão e carregamento
+- dags
+- data
+- notebooks
+- src
+- main.py
+- scripts de carregamento
+
+README existente, mas deve ser aprofundado com arquitetura, fluxo, fonte, esquema e execução.
+
+Testes: não foi encontrada evidência clara de suíte completa na árvore superficial.
+CI/CD: não confirmado.
+Docker: presente.
+Estado: ativo, com sinais de manutenção recente.
+Classificação: projeto aplicado de portfólio.
+Valor: alto para Data Engineering, automação e engenharia de software.
+Recomendação: pinned depois de revisar os dados e melhorar a documentação.
+
+Atenção ao diretório data, que deve ser verificado quanto a dados pessoais, arquivos grandes e dados brutos desnecessários.
+
+6. CONTROLE-DE-SOLICITA-ES
+
+Propósito: painel desktop para gestão de solicitações multicanal, triagem, SLA e operação em tempo real.
+
+Linguagens: Python e JavaScript/TypeScript.
+Tecnologias declaradas:
+- Flask
+- React
+- Electron
+- SQLite
+
+Estrutura:
+- backend
+- frontend
+- electron
+- package.json
+- lockfile
+- .gitignore
+
+Estado: projeto aplicado, aparentemente em desenvolvimento.
+Classificação: portfólio/aplicação profissional.
+Valor: alto para Full Stack e Desktop Engineering.
+Recomendação: manter público; considerar pin após documentar execução, screenshots, arquitetura e testes.
+
+7. AGENTALTERDATA
+
+Propósito aparente: agente/automação voltado ao ecossistema Alterdata.
+
+Linguagem: Python.
+Estrutura:
+- bases-oficiais
+- casos-reais
+- docs
+- prompts
+- scripts
+- skill
+- templates
+- CHANGELOG.md
+- ROADMAP.md
+- SKILL.md
+- requirements.txt
+
+Conceitos: agentes, prompts, automação, bases de conhecimento e fluxos operacionais.
+
+Estado: projeto em evolução.
+Classificação: AI/automation aplicada.
+Valor: potencialmente alto para AI Engineering.
+Recomendação: não pinnen ainda sem auditar casos-reais e bases-oficiais, remover dados reais e comprovar código executável, avaliação e reprodutibilidade.
+
+Riscos:
+- dados de clientes
+- documentos internos
+- informações fiscais
+- dados pessoais
+- prompts internos
+- endpoints privados
+- credenciais
+
+8. GENERATORDASH
+
+Propósito: aplicação/dashboard em Python, aparentemente baseada em Streamlit.
+
+Tecnologias e estrutura:
+- Streamlit
+- pyproject.toml
+- requirements.txt
+- app.py
+- lmx_dashboard
+- tests
+- run_tests.py
+- verify_dry_run.py
+
+Testes: há diretório tests e scripts de execução/validação.
+Estado: projeto técnico funcional ou protótipo avançado.
+Valor: moderado a alto.
+Recomendação: manter público e considerar destaque após explicar o caso de uso e os resultados.
+
+9. AUTOMATIONPROCSSes
+
+Propósito: automações em Python.
+
+Estrutura:
+- src
+- tests
+- logs
+- output
+- requirements.txt
+- .gitignore
+
+Pontos positivos: existência de tests e separação entre código e artefatos.
+Problemas:
+- nome contém erro de grafia
+- logs e output podem conter dados pessoais, caminhos locais ou resultados sensíveis
+- documentação deve ser melhorada
+
+Valor: moderado.
+Recomendação: revisar logs/output e não destacar antes de melhorar nome, README e evidências de testes.
+
+10. DRIVERBYPASS
+
+Linguagem: C.
+Estrutura: driver, LICENSE, README.md e .gitignore.
+
+Natureza: projeto de baixo nível/driver.
+
+Risco de posicionamento: o nome pode ser interpretado como tentativa de contornar mecanismos de segurança, assinaturas ou controles de sistema.
+
+Valor técnico: existente, mas ambíguo.
+Recomendação: manter público somente com finalidade legítima, escopo, ambiente de teste e limites claramente documentados. Não pinnen no perfil principal.
+
+OUTROS REPOSITÓRIOS IDENTIFICADOS
+
+- Sitermk: site simples em CSS; manter fora do destaque.
+- awesome-llm-apps: possível fork ou coleção externa de apps LLM; não tratar como autoria sem verificar contribuições.
+- superpowers: framework/metodologia de agentes; fora do destaque se for fork.
+- andrej-karpathy-skills: configuração/skills de IA; verificar autoria.
+- skills-claudio: coleção de agent skills; manter apenas se houver autoria relevante.
+- skills-engineer: skills e arquivos de agentes; pode diluir o perfil.
+- nome-repo: sem propósito e sem descrição; candidato a arquivamento futuro.
+- appproject: TypeScript sem descrição; documentar ou deixar fora do destaque.
+- app-mensagem-local: aplicação local de mensagens; portfólio secundário.
+- app-mensagem-local-somente-msg: variante/duplicação; consolidar ou deixar fora do destaque.
+- dinamica.contabilidade: TypeScript sem descrição; documentar antes de destacar.
+- dinamica-contabilidade: CSS, provável frontend separado/duplicado; não destacar isoladamente.
+- controlpointid: JavaScript sem descrição; avaliar estrutura.
+- Agentanalistyfiscal: Python, agente fiscal/AI aplicada; revisar código, dados e documentação.
+- chromeextension: JavaScript, extensão Chrome sem descrição; portfólio secundário.
+- skyscan: HTML, site/protótipo sem descrição; fora do destaque.
+- celsonaemen.github.io: site pessoal; pode ser mantido, mas não substitui o profile README.
+- CursoCleanCodeRocketseat: curso/estudo; fora do destaque.
+- verificadoripost: pequena aplicação JavaScript; fora do destaque.
+- webhookwebsocket: protótipo HTML; fora do destaque.
+- Systemtms: sistema TMS com descrição mínima; documentar ou deixar fora.
+- MobileApp: protótipo antigo em CSS; fora do destaque.
+- Peacehealth.IA e Peacehealth.IA2: projetos de estudo/site; fora do destaque.
+- orbot-android: provável fork do Orbot; identificar claramente como fork.
+- site-empresa-rm: site com Next.js/Vercel/Strapi planejado; portfólio secundário.
+- chatbootwpp: chatbot WhatsApp sem descrição; revisar APIs e segurança.
+- Exit.point.app e exit-point-app-: variantes sem descrição clara; consolidar ou deixar fora.
+- meu_app: projeto genérico/experimental; fora do destaque.
+- gerador-de-escala-new: automação para geração de escala; portfólio secundário.
+- repository01: repositório de teste; arquivar ou deixar fora.
+- celsonaemenstudio: sem evidência clara; fora do destaque.
+
+MELHORES PROJETOS PARA DESTACAR
+
+Ranking recomendado:
+
+1. Orion.
+2. ETL-Manhu-MG.
+3. acer-a315-56-control.
+4. controle-de-solicita-es.
+5. agentalterdata ou Agentanalistyfiscal, após auditoria.
+6. generatordash, contribuição open source ou um novo projeto autoral de AI Engineering.
+
+O IPED deve aparecer com destaque em Open Source Contributions, mas não necessariamente como projeto próprio pinned, porque a contribuição foi feita em repositório externo.
+
+PROJETOS QUE DILUEM O POSICIONAMENTO
+
+Principais fontes de ruído:
+- repositórios sem descrição, como nome-repo, repository01, meu_app e appproject;
+- projetos de curso;
+- variantes e duplicações;
+- forks sem contribuição evidente;
+- nomes pouco profissionais como automationprocsses e DRIVERBYPASS;
+- protótipos antigos sem contexto.
+
+Fork não é problema, mas deve ser identificado como fork e não usado como prova de autoria original sem contribuições relevantes.
+
+PROBLEMAS DE DOCUMENTAÇÃO
+
+1. Muitos repositórios não possuem descrição.
+2. README ausente ou genérico em vários projetos.
+3. Falta padronização de objetivo, arquitetura, instalação, execução, testes, limitações, segurança, licença e status.
+4. Métricas aparecem no perfil, mas não nos repositórios correspondentes.
+5. Os PRs do Orion são mais informativos que o README.
+6. Contribuições upstream não estão agrupadas.
+7. Não há separação clara entre produção, portfólio, estudo, fork, experimento e projeto abandonado.
+
+ESTRUTURA RECOMENDADA PARA READMEs
+
+# Nome
+
+Resumo em uma frase.
+
+## Problema
+## Arquitetura
+## Tecnologias
+## Principais decisões técnicas
+## Segurança
+## Testes
+## Execução local
+## Estado atual
+## Limitações
+## Licença
+
+PROBLEMAS DE SEGURANÇA
+
+A auditoria indicativa não substitui uma varredura completa de todos os blobs e do histórico Git.
+
+Prioridades:
+
+1. Auditar casos-reais e bases-oficiais no agentalterdata.
+2. Auditar logs e output no automationprocsses.
+3. Auditar data no ETL-Manhu-MG.
+4. Confirmar que .env está ignorado e que nenhum segredo apareceu no histórico do Orion.
+5. Buscar historicamente por API_KEY, TOKEN, SECRET, PASSWORD, PRIVATE_KEY, credenciais de banco, tokens OAuth, arquivos .env, dumps e certificados.
+6. Documentar riscos de execução nos projetos de baixo nível.
+7. Avaliar conscientemente a publicação do endereço de e-mail no README.
+
+Classificação indicativa:
+- Segredos explícitos detectados: não confirmado.
+- Necessidade de varredura histórica: alta.
+- Dados em agentalterdata: alta.
+- Logs e outputs: média/alta.
+- Dados no ETL: média.
+- Projetos de baixo nível: média, principalmente operacional.
+- Orion: baixo risco aparente no estado analisado.
+
+CONTRIBUIÇÕES OPEN SOURCE
+
+1. IPED — PR #2979 integrado
+https://github.com/sepinf-inc/IPED/pull/2979
+
+Contribuição em AppIDCalculator relacionada a Windows Jump Lists, normalização de caminhos, %USERPROFILE%, %PUBLIC%, falso match PublicAlice e testes.
+
+2. PawnIO.Modules — PR #95
+https://github.com/namazso/PawnIO.Modules/pull/95
+
+Módulo read-only para Acer A315-56, ACPI/EC, MMIO, validação de hardware, limites de acesso e reverse engineering.
+
+3. PawnIO.Modules — PR #96
+https://github.com/namazso/PawnIO.Modules/pull/96
+
+Controle semântico de Intel bi-directional PROCHOT, MSR POWER_CTL, read-modify-write, read-back e prevenção de escrita arbitrária.
+
+4. OpenClaude — issue #300
+https://github.com/Gitlawb/openclaude/issues/300
+
+Issue detalhada sobre OpenAI-compatible providers, Groq, Termux/Android e variáveis OPENAI_MODEL/CLAUDE_CODE_USE_OPENAI. Valor moderado para AI tooling e debugging.
+
+5. LeetCode Feedback — issue #33934
+https://github.com/LeetCode-Feedback/LeetCode-Feedback/issues/33934
+
+Issue sobre possível caso de teste ausente e conversão de tipos em Pandas. Valor baixo para a vitrine profissional principal.
+
+TECNOLOGIAS COM EVIDÊNCIA PÚBLICA
+
+Evidência forte:
+- Python
+- TypeScript
+- JavaScript
+- Java/Maven
+- C/C#
+- Kotlin
+- HTML/CSS
+- Next.js
+- NestJS
+- React
+- Flask
+- Electron
+- PostgreSQL
+- Prisma
+- SQLite
+- Docker Compose
+- pnpm
+- Streamlit
+- ETL
+- DAGs
+- testes automatizados
+- bcrypt
+- JWT
+- cookies HttpOnly
+- RBAC
+- auditoria
+- ACPI
+- MSR
+- MMIO
+- IOCTL
+- Windows Internals
+- firmware/EC
+- Pawn/PawnIO
+- processamento forense digital
+- Windows Jump Lists
+
+Evidência moderada:
+- AI agents
+- prompt engineering
+- RAG
+- automação com LLM
+- aplicações de IA para domínio fiscal
+- WebSocket
+- APIs REST
+- desktop engineering
+
+TECNOLOGIAS OU AFIRMAÇÕES SEM EVIDÊNCIA PÚBLICA SUFICIENTE
+
+O README atual declara ou sugere:
+- Kubernetes
+- Terraform
+- AWS
+- Vercel
+- S3
+- Redis
+- RabbitMQ
+- GraphQL
+- Stripe
+- microsserviços em produção
+- 99,9% de uptime
+- redução de 42% no tempo de carregamento
+- redução de 63% no deploy
+- 17 vulnerabilidades encontradas em produção
+- CVEs
+- manutenção de pacotes NPM
+- contribuições diretas em Next.js, Prisma e NestJS
+- liderança de times de 5–8 engenheiros
+- experiência profissional sênior desde 2022
+
+Recomendação: manter somente afirmações observáveis nos repositórios ou acompanhadas de links e contexto verificável.
+
+RECOMENDAÇÕES PARA OS 6 PINNED REPOSITORIES
+
+1. orion — pin imediato.
+2. ETL-Manhu-MG — pin após revisar dados e README.
+3. acer-a315-56-control — pin recomendado.
+4. controle-de-solicita-es — pin após documentação, screenshots e testes.
+5. generatordash — pin condicional à explicação do problema e resultados.
+6. agentalterdata, Agentanalistyfiscal ou novo projeto de AI Engineering, conforme auditoria e evidência.
+
+REORGANIZAÇÃO DO PERFIL
+
+Headline recomendado:
+
+Software Engineer focused on full-stack systems, application security, AI engineering and digital forensics.
+
+Ou:
+
+Software Engineer com foco em sistemas full stack, segurança de aplicações, engenharia de IA e perícia digital.
+
+Estrutura recomendada do profile README:
+
+# Olá, sou Celso
+
+Software Engineer focado em construir sistemas seguros e observáveis.
+
+## Foco técnico
+- Software Engineering
+- Full Stack Development
+- Application Security
+- AI Engineering
+- Digital Forensics
+- Open Source
+
+## Projetos selecionados
+- Orion
+- ETL-Manhu-MG
+- Acer A315-56 Control
+- Controle de Solicitações
+- Projeto de AI/Agents
+- Generator Dashboard
+
+## Open Source
+- IPED — PR #2979
+- PawnIO.Modules — PR #95
+- PawnIO.Modules — PR #96
+
+## Tecnologias comprovadas
+Lista curta baseada no código público.
+
+## Como trabalho
+- testes antes de afirmações;
+- segurança como propriedade arquitetural;
+- documentação de decisões;
+- automação de tarefas repetitivas;
+- preferência por sistemas reproduzíveis.
+
+## Contato
+
+Remover ou reduzir:
+- grandes blocos de ícones;
+- tecnologias sem evidência;
+- métricas sem fonte;
+- números de vulnerabilidades sem links;
+- declarações de senioridade sem contexto;
+- listas extensas de tecnologias não demonstradas.
+
+TAXONOMIA VISUAL RECOMENDADA
+
+Engineering:
+- orion
+- controle-de-solicita-es
+- ETL-Manhu-MG
+
+Security and Systems:
+- acer-a315-56-control
+- DRIVERBYPASS, com ressalvas
+- PawnIO.Modules, como contribuição
+
+AI and Automation:
+- agentalterdata
+- Agentanalistyfiscal
+- generatordash
+
+Digital Forensics and Open Source:
+- contribuição no IPED
+- outras contribuições upstream
+
+Experiments and Learning:
+- projetos de curso
+- protótipos
+- forks
+- variantes antigas
+
+PLANO DE MELHORIA DOS PRINCIPAIS REPOSITÓRIOS
+
+ORION — prioridade muito alta
+
+- adicionar diagrama da arquitetura;
+- tabela de funcionalidades;
+- fluxo de autenticação;
+- explicar cookies, refresh tokens e revogação;
+- comandos de instalação, PostgreSQL, migrations, seed, testes, lint, typecheck e build;
+- workflow CI e badge;
+- documentar implementado versus placeholder;
+- threat model simples;
+- confirmar ausência de credenciais e dados não fictícios.
+
+ETL-MANHU-MG — prioridade alta
+
+- explicar fonte dos dados;
+- adicionar diagrama do pipeline;
+- descrever DAGs;
+- explicar schema e destino;
+- separar dados de exemplo e dados gerados;
+- adicionar testes de transformação;
+- validação da qualidade dos dados;
+- remover arquivos .bak desnecessários;
+- documentar execução com Docker;
+- incluir exemplo pequeno e sanitizado.
+
+ACER-A315-56-CONTROL — prioridade alta
+
+- destacar compatibilidade específica;
+- adicionar threat model;
+- documentar riscos de execução como administrador;
+- separar pesquisa, código experimental e instalação;
+- adicionar testes de parsing e validação sem hardware;
+- explicar o que é read-only e o que altera estado;
+- matriz de compatibilidade;
+- logs sem dados pessoais.
+
+CONTROLE-DE-SOLICITA-ES — prioridade média/alta
+
+- screenshot ou GIF;
+- fluxo de usuário;
+- documentação de backend, frontend e Electron;
+- build do desktop;
+- testes;
+- persistência SQLite;
+- recursos concluídos e pendentes;
+- visão de arquitetura.
+
+AGENTALTERDATA — prioridade alta, condicionada à segurança
+
+- auditar casos-reais e bases-oficiais;
+- remover/anonimizar dados reais;
+- explicar arquitetura do agente;
+- documentar ferramentas, prompts e fontes;
+- testes de regressão;
+- dataset sintético;
+- medir precisão, erro, custo, latência e resistência a prompt injection;
+- explicar limites legais e operacionais.
+
+GENERATORDASH — prioridade média
+
+- explicar problema resolvido;
+- fluxo de dados;
+- testes;
+- screenshot;
+- separar aplicação e validação;
+- workflow para testes;
+- documentar deploy, se aplicável.
+
+AUTOMATIONPROCSSes — prioridade média
+
+- corrigir nome ou não destacar;
+- revisar logs e output;
+- exemplos sintéticos;
+- documentar automações;
+- testes determinísticos;
+- remover artefatos gerados.
+
+DRIVERBYPASS — prioridade condicional
+
+- finalidade legítima;
+- evitar linguagem de evasão;
+- ambiente de teste;
+- aviso de risco;
+- modelo de ameaça;
+- compatibilidade e limitações;
+- não colocar entre os projetos principais sem contexto.
+
+ARQUITETURA FINAL DA NARRATIVA
+
+1. Software Engineer
+   Evidências: Orion, controle de solicitações, ETL, testes, arquitetura, documentação e CI.
+
+2. Full Stack Development
+   Evidências: Next.js, NestJS, React, Flask, Electron, PostgreSQL, Prisma, autenticação, autorização, BFF e aplicações web/desktop.
+
+3. Application Security
+   Evidências: cookies HttpOnly, refresh token hash, RBAC, revogação, auditoria, validação de origem e segurança arquitetural.
+
+4. AI Engineering
+   Evidências atuais: Agente Alterdata, Agentanalistyfiscal, skills e ferramentas de agentes. Recomenda-se criar projeto de referência com RAG, avaliação, tracing, custo, segurança contra prompt injection, testes, Docker e API.
+
+5. Open Source
+   Evidências: IPED PR #2979 integrado; PawnIO.Modules PRs #95 e #96; issues técnicas bem documentadas.
+
+6. Digital Forensics
+   Evidências: IPED, Windows Jump Lists, AppIDCalculator, artefatos de sistema operacional, pesquisa de baixo nível e ferramentas de análise.
+
+CONCLUSÃO
+
+O perfil já contém material suficiente para sustentar a imagem de um Software Engineer técnico, especialmente em full stack, segurança, sistemas Windows, hardware/firmware, automação, perícia digital e open source.
+
+O trabalho principal é:
+
+1. reduzir ruído;
+2. diferenciar autoria de fork;
+3. documentar os projetos fortes;
+4. eliminar ou esconder projetos vazios;
+5. auditar dados sensíveis;
+6. vincular afirmações a código, PRs e resultados verificáveis;
+7. construir uma demonstração mais sólida de AI Engineering.
+
+Nenhuma alteração adicional deve ser feita sem revisão e aprovação do proprietário do perfil.
