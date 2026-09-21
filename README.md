@@ -1,301 +1,77 @@
-🎯 Who Am I
+# Celso Naemen
 
-Fullstack Engineer com Application Security embutida no DNA.
+**Software Engineer** focado em construir sistemas full stack, explorar segurança de aplicações, automatizar fluxos com IA e investigar sistemas Windows.
 
-Não construo apenas features — construo sistemas pensando em como eles podem falhar, onde estão os gargalos e como torná-los mais resilientes. Minha abordagem une engenharia de software com segurança ofensiva: se eu não consigo quebrar, provavelmente construí bem.
+## Engineering Focus
 
-· 7+ anos construindo aplicações web, APIs e sistemas distribuídos
-· Application Security como disciplina central desde o design
-· Fullstack com ênfase em arquitetura, performance e observabilidade
-· Automação como ferramenta para eliminar repetição e focar no que importa
+- Software Engineering
+- Full Stack Development
+- Application Security
+- AI Engineering
+- Open Source
+- Digital Forensics
 
----___________------------______________---------
+## Selected Engineering Work
 
-⚡ Impact Metrics
+- [**Orion**](https://github.com/celsonaemen/orion) — Aplicação full stack para autenticação, administração, permissões e comunicação. Construída em TypeScript com Next.js, NestJS, PostgreSQL e Prisma; destaca-se pelo tratamento explícito de sessões, cookies HttpOnly, autorização, auditoria e testes.
 
-Área Realizações
-Performance Redução de 42% no tempo de carregamento de páginas em aplicações Next.js
-Arquitetura Migração de monólito para microsserviços, reduzindo 63% no tempo de deploy
-Segurança Identificação e correção de 17 vulnerabilidades em produção antes de qualquer exploração
-Banco de Dados Otimização de queries que reduziu 55% no tempo de resposta de APIs
-Automação Pipeline CI/CD que reduziu 70% do tempo de release manual
+- [**ETL-Manhu-MG**](https://github.com/celsonaemen/ETL-Manhu-MG) — Pipeline para coleta e processamento de dados climáticos de Manhuaçu, Minas Gerais. Usa Python, DAGs e Docker Compose para organizar ingestão, transformação e carregamento de dados em um fluxo reproduzível.
 
----___________------------______________---------
+- [**acer-a315-56-control**](https://github.com/celsonaemen/acer-a315-56-control) — Pesquisa e diagnóstico de baixo nível para o Acer Aspire A315-56. Explora ACPI, DSDT, EC, MMIO, MSR e IOCTL em código C#, com escopo de hardware específico e restrições defensivas documentadas.
 
-🛠️ Tech Stack
+- [**controle-de-solicita-es**](https://github.com/celsonaemen/controle-de-solicita-es) — Painel desktop para gestão de solicitações multicanal, triagem, status e SLA. Combina Flask, React, Electron e SQLite em uma aplicação integrada para operação local.
 
-Frontend
+- [**Agentanalistyfiscal**](https://github.com/celsonaemen/Agentanalistyfiscal) — Projeto em Python voltado a agente e automação para um domínio fiscal. O repositório reúne código, bases, prompts, documentação e ferramentas; é apresentado aqui como trabalho aplicado de AI Engineering, não como alegação de experiência profissional consolidada.
 
-```
-TypeScript · React · Next.js · TanStack Query · Tailwind · Framer Motion
-```
+- [**generatordash**](https://github.com/celsonaemen/generatordash) — Dashboard em Python/Streamlit com estrutura de testes e scripts de validação. Demonstra exploração de interfaces de dados e preocupação com verificação do comportamento da aplicação.
 
-Backend
+## Open Source Contributions
 
-```
-TypeScript · NestJS · Node.js · Fastify · GraphQL · WebSockets
-```
+- [**IPED — PR #2979**](https://github.com/sepinf-inc/IPED/pull/2979) — Contribuição integrada que corrigiu a normalização de caminhos usada no cálculo de AppIDs para Windows Jump Lists. O ajuste trata caminhos sob `%USERPROFILE%` e `%PUBLIC%`, evita falsos matches como `PublicAlice` e adiciona testes de regressão.
 
-Database & Storage
+- [**PawnIO.Modules — PR #95**](https://github.com/namazso/PawnIO.Modules/pull/95) — Pull request aberto para um módulo read-only específico do Acer A315-56, baseado em ACPI/EC, com validação de hardware, limites de acesso e documentação do reverse engineering.
 
-```
-PostgreSQL · Prisma · Supabase · Redis · AWS S3
-```
+- [**PawnIO.Modules — PR #96**](https://github.com/namazso/PawnIO.Modules/pull/96) — Pull request aberto para controle semântico do Intel bi-directional PROCHOT. A implementação usa read-modify-write restrito ao `MSR_POWER_CTL`, valida o ambiente e exige read-back após alterações.
 
-Security (Core)
+## Technical Areas
 
-```
-OWASP Top 10 · JWT · OAuth2 · RBAC · API Security · Penetration Testing
-```
+### Full Stack
 
-DevOps & Cloud
+TypeScript, JavaScript, React, Next.js, NestJS, Node.js, Flask, Electron, PostgreSQL, Prisma, SQLite, Docker Compose e pnpm.
 
-```
-Docker · Kubernetes · AWS · Vercel · GitHub Actions · Terraform
-```
+### Systems
 
----
+Windows internals, ACPI, DSDT, EC, MMIO, MSR, IOCTL, drivers, firmware research e Pawn/PawnIO.
 
-🚀 Featured Work
+### AI Engineering
 
-ControlPointID — Fullstack Application
+Python, agentes, automação, prompts, bases de conhecimento e ferramentas relacionadas a LLMs, sempre no contexto dos projetos públicos correspondentes.
 
-Sistema de gerenciamento de identidade com foco em controle de acesso e segurança de dados.
+### Security
 
-Stack: Next.js · TypeScript · Supabase · PostgreSQL · Prisma · Vercel
+Authentication, authorization, RBAC, JWT, bcrypt, cookies HttpOnly, refresh-token handling, session management, auditoria e validação de escopo em aplicações e módulos de baixo nível.
 
-Desafio: Construir uma aplicação com autenticação robusta, RBAC granular e dados sensíveis protegidos.
+### Data
 
-Resultados:
+Python, ETL, DAGs, Docker Compose, ingestão, transformação e carregamento de dados.
 
-· ✅ 99.9% uptime desde o lançamento
-· ✅ 0 vulnerabilidades reportadas em 3 meses de uso
-· ✅ 300ms de tempo médio de resposta
-· ✅ Deploy contínuo com rollback automático
+### Mobile
 
+Kotlin/Android aparece em projetos públicos de estudo e prototipagem; não é apresentado aqui como experiência profissional consolidada.
 
----
+## Engineering Approach
 
-Realtime Target Tracker — Computer Vision
+- Reproduzir e testar problemas antes de propor correções.
+- Tratar segurança como parte da arquitetura, não como uma etapa isolada.
+- Documentar decisões técnicas, limites operacionais e hipóteses.
+- Automatizar tarefas repetitivas e favorecer fluxos reproduzíveis.
+- Contribuir upstream quando uma correção ou melhoria puder beneficiar o projeto de origem.
 
-Sistema de detecção e rastreamento de objetos em tempo real usando YOLOv5.
+## Current Interests
 
-Stack: Python · YOLOv5 · OpenCV · WebRTC · FastAPI
+Atualmente exploro **AI Engineering**, **Application Security**, **Windows Internals**, **Digital Forensics**, **Open Source**, **Agentic Systems** e **RAG/LLMs**. Esses interesses refletem projetos e estudos públicos em andamento, e não necessariamente experiência profissional consolidada em cada área.
 
-Desafio: Processar vídeo em tempo real com latência < 100ms em hardware modesto.
+## Contact
 
-Resultados:
-
-· ✅ 45 FPS em GPUs consumer-grade
-· ✅ Detecção com 87% de precisão média (mAP)
-· ✅ Suporte a múltiplas fontes: webcam, vídeo, imagem
-
-
----
-
-Security Labs — Research Environment
-
-Ambiente controlado para estudo de vulnerabilidades web e APIs.
-
-Foco:
-
-· Authentication Bypass
-· JWT Manipulation
-· IDOR (Insecure Direct Object References)
-· SQL/NoSQL Injection
-· Business Logic Flaws
-· Rate Limiting Bypass
-
-Metodologia:
-
-```
-Reconnaissance → Attack Surface → Vulnerability Analysis → 
-Controlled Exploitation → Impact Assessment → Root Cause → 
-Mitigation → Secure Implementation
-```
-
-Diferencial: Cada vulnerabilidade é documentada com Proof of Concept e mitigação implementável, não apenas teoria.
-
-
-
----___________------------______________---------
-
-🧠 Engineering Philosophy
-
-```
-┌──────────────────────────────────────────────────┐
-│                                                  │
-│   BUILD          →  Criar sistemas simples       │
-│   BREAK          →  Testar limites               │
-│   MEASURE        →  Validar com dados            │
-│   SECURE         →  Segurança na arquitetura     │
-│   AUTOMATE       →  Eliminar repetição           │
-│                                                  │
-└──────────────────────────────────────────────────┘
-```
-
-Princípios que guiam meu trabalho:
-
-1. Simplicidade > Complexidade — Todo sistema complexo é frágil
-2. Segurança nativa — Não é camada, é fundação
-3. Observabilidade primeiro — Se não dá pra medir, não dá pra melhorar
-4. Automação agressiva — Máquinas pra repetição, humanos pra decisão
-5. Ceticismo saudável — "Funciona" não é resposta final
-
----
-
-📊 Architectural Approach
-
-```
-                    ┌─────────────────────┐
-                    │    Frontend Layer    │
-                    │  Next.js / React     │
-                    └──────────┬───────────┘
-                               │
-                    ┌──────────▼───────────┐
-                    │     API Gateway       │
-                    │  NestJS / Fastify     │
-                    └──────────┬───────────┘
-                               │
-          ┌────────────────────┼────────────────────┐
-          │                    │                    │
-┌─────────▼─────────┐ ┌───────▼───────┐ ┌──────────▼──────────┐
-│   Service Layer    │ │   Cache       │ │   Queue / Workers   │
-│   Business Logic   │ │   Redis       │ │   Bull / RabbitMQ   │
-└─────────┬─────────┘ └───────────────┘ └──────────┬──────────┘
-          │                                        │
-┌─────────▼─────────┐                     ┌─────────▼──────────┐
-│  Data Layer        │                     │   External APIs    │
-│  PostgreSQL        │                     │   Stripe / etc     │
-└────────────────────┘                     └────────────────────┘
-
-                    ┌─────────────────────────────────────┐
-                    │       Security Layer (Cross-Cutting)│
-                    │  Auth · RBAC · Validation · Audit  │
-                    └─────────────────────────────────────┘
-```
-
----___________------------______________---------
-
-🔐 Security Research
-
-Áreas de estudo contínuo:
-
-· Web Application Security — OWASP Top 10, ataque e defesa
-· API Security — GraphQL, REST, gRPC
-· Authentication & Authorization — OAuth2, JWT, SAML, RBAC, ABAC
-· Cryptography — TLS, hashing, encryption at rest/in transit
-· Cloud Security — AWS, containers, Kubernetes
-· Bug Bounty — Participação ativa em programas privados
-
-Metodologia de pesquisa:
-
-```
-1. Reconnaissance    → Mapeamento do sistema
-2. Attack Surface    → Identificação de pontos de entrada
-3. Vulnerability     → Análise aprofundada
-4. Exploitation      → Validação controlada
-5. Impact            → Avaliação de risco real
-6. Root Cause        → Entendimento da falha
-7. Mitigation        → Correção aplicável
-8. Implementation    → Prevenção futura
-```
-
-Resultados:
-
-· 17 vulnerabilidades reportadas em programas de bug bounty (privados)
-· 5 CVEs atribuídas (em processo)
-· Colaboração em 3 projetos open source de segurança
-
----
-
-📚 Currently Exploring
-
-Security
-
-· Web3 Security (Smart Contracts, DeFi)
-· AI/ML Security (Adversarial ML, Prompt Injection)
-· Cloud Native Security (Service Mesh, Zero Trust)
-
-Engineering
-
-· Distributed Systems (CAP Theorem, Consistency)
-· Event-Driven Architecture (Kafka, Event Sourcing)
-· Database Engineering (Internals, Query Optimization)
-
-Research
-
-· Post-Quantum Cryptography
-· Supply Chain Security
-· Threat Modeling Frameworks
-
----
-
-💼 Professional Experience
-
-Senior Fullstack Engineer | Remote
-
-2022 - Present
-
-· Liderança técnica em projetos com times de 5-8 engenheiros
-· Arquitetura de microsserviços com NestJS e PostgreSQL
-· Implementação de pipelines CI/CD com segurança integrada
-· Mentoria de engenheiros juniores em práticas de segurança
-
-Fullstack Developer | Remote
-
-2019 - 2022
-
-· Desenvolvimento de aplicações web com React/Next.js
-· Construção de APIs RESTful com Node.js/Express
-· Otimização de performance e banco de dados
-· Primeiros passos em Application Security
-
-Security Researcher | Independent
-
-2020 - Present
-
-· Estudo autodirigido de vulnerabilidades web
-· Participação em programas de bug bounty
-· Desenvolvimento de ferramentas de segurança
-· Documentação pública de técnicas e descobertas
-
----
-
-🤝 Open Source & Community
-
-· Contribuições ativas em projetos como Next.js, Prisma e NestJS
-· Mantenedor de 2 pacotes NPM para segurança
-· Palestras em meetups locais sobre segurança de aplicações
-· Mentoria em comunidades de desenvolvimento e segurança
-
----
-
-📫 Let's Connect
-
-· GitHub: @celsonaemen
-· LinkedIn: Celso Naemen
-· X: @celsonaemen
-· Email: celso.naemen@proton.me
-
----
-
-🎯 Looking For
-
-Colaborações em:
-
-· Projetos open source com foco em segurança
-· Ferramentas de análise de vulnerabilidades
-· Arquitetura de sistemas resilientes
-· Pesquisa em segurança de aplicações
-· Engenharia de dados e performance
-
-Se envolve construir, quebrar ou melhorar sistemas — vamos conversar.
-
----
-
-<div align="center">
-
-"Segurança não é um recurso, é uma propriedade do sistema bem projetado."
-
-</div>
+- [GitHub](https://github.com/celsonaemen)
+- [Email](mailto:celso.naemen@proton.me)
